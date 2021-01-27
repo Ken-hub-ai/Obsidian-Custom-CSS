@@ -1,0 +1,93 @@
+/*made with help his Boss by ahmed | made on: 25-jan-2021 */
+/*contact ahmed on github: github.com/viaAhmed */
+/*contact ahmed on twitter: @viaAhmed_ */
+/*inspired from: (https://codepen.io/MarcMalignan/pen/QbaXGg)*/
+/*THIS THEME NEEDS SOME POLISH, PLEASE FEEL FREE TO CONTRIBUTE ON GITHUB*/
+/*YOU MAY LOAD THIS AS CSS SNIPPET AND USE PREFEREBLY WITH THE MOLECULE THEME OR NONE THEME*/
+not(.workspace-leaf.mod-active) {
+	box-shadow: 0 2px 8px rgb(0 0 0 / 0%);
+}
+.view-header {
+	border-bottom-width: 1px !important;
+	border-bottom-color: #D44147 !important;
+	border-bottom-style: double !important;
+}
+.CodeMirror-scroll {
+margin-left:60px !important;
+}
+.markdown-preview-sizer {
+	margin-left:60px !important;
+}
+/*the paper margin*/
+.markdown-preview-view:before{
+	position: absolute !important;
+	height: calc(100vh * 5) !important;
+}
+.markdown-preview-view:before,
+.CodeMirror-vscrollbar > div:before {
+	height: 100%;
+	display: flex;
+    content: '';
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    /*right: 60px;*/
+    width: 60px;
+    background: radial-gradient(#575450 6px, transparent 7px) repeat-y;
+    background-size: 30px 30px;
+    border-right: 3px solid #D44147;
+    box-sizing: border-box;
+  } 
+
+ 
+.CodeMirror-lines, .markdown-preview-sizer .markdown-preview-section {
+	width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    line-height: 30px;
+    padding: 0 10px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: mediumblue;
+    font-family: 'Handlee' !important;
+    font-weight: thin;
+    font-size: 18px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+/*for blue rulings of paper*/
+/*.CodeMirror-scroll > div,*/ .markdown-preview-sizer .markdown-preview-section{
+	position: absolute;
+    top: 30px;
+    right: 0;
+    bottom: 30px;
+    left: 60px;
+    background: linear-gradient(transparent, transparent 28px, #91D1D3 28px);
+    background-size: 30px 30px;
+}
+
+/*for elevated effect*/
+.workspace-leaf {
+    /*padding:10px;*/
+   /* position: relative;*/
+    width: 90%;
+    height:90%;
+    margin: 10px 10px auto;
+    background: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 30%);
+    overflow: hidden;
+}
+/*known bug
+- resize handle at wrong place when panes stacked in 4 x 4 manner.
+*/
+/*misc*/
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle, .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+    z-index: var(--layer-status-bar);
+    height: calc(100% - 0px);
+    top: 0;
+     bottom: 0;
+}
